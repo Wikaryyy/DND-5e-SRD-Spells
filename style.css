@@ -1,0 +1,98 @@
+body
+{
+    background-color: #383535;
+    --colorOfBorder:#b9bdb9;
+}
+
+#flexContainer
+{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+#container
+{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    
+}
+
+#searchTemplate
+{
+    color:white;
+    font-family: 'Roboto', sans-serif;
+    font-size:1rem;
+}
+
+#spell
+{
+    background-color: white;
+    width: 20vw;
+    height: 40vh;
+}
+
+#spellContainer
+{
+    color:white;
+    background-color: black;
+    border-radius: 20px;
+    width: 20vw;
+    padding: 10px 10px;
+    min-width: 289px;
+    display: flex;
+    flex-direction: column;
+    font-family: 'Poppins', sans-serif;
+    font-size: 1rem;
+    border-width:5px;
+    border-color: var(--colorOfBorder);  
+    border-style:inset;
+}
+#spellStatistics
+{
+    margin-right: 15px;
+}
+
+#inputContainer
+{
+    display: flex;
+    text-align: center;
+    flex-direction: column;
+    align-items: center;
+    padding:10px 10px   
+}
+
+input[type=text]
+{
+    max-width: 289px;
+    width:400px;
+    height: 50px;
+    text-align: center;
+    background-color: black;
+    color:white;
+    border-width:5px;  
+    border-style:inset;
+    outline: none;
+    border-color: var(--colorOfBorder);
+}
+
+input[type=submit]
+{
+    outline: none;
+    width:100px;
+    height: 35px;
+    margin-top: 15px;
+    border-width:5px;  
+    border-style:outset;
+    background-color: black;
+    color:white;
+    border-color: var(--colorOfBorder);
+}
+
+input[type=submit]:active
+{
+    border-style:inset;
+}

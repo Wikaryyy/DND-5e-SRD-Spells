@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+  <head>
+    <title>Spells</title>
+    <link rel="icon" type="image/x-icon" href="favicon-16x16.png" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+  </head>
+
+  <body>
+    <div id="flexContainer">
+          <div id="container">
+
+            <div id="inputContainer">
+                  <p id="searchTemplate">Spell search template: ray-of-frost <br>(U need to write it in lowercase and with - instead of " ")</p>
+                  <input type="text" placeholder="What spell are you looking for?" id="searchArea">
+                  <input type="submit" value="Szukaj" onclick="getSpell()">
+                  <input type="submit" value="Czysc" onclick="clearSpellContainer()">
+            </div>
+
+            <div id="spellContainer">
+              <div id="spellStatistics">
+                    <p class="spellName">Spell Name: <span id="spellName"></span></p>
+                    <p class="level">Level: <span id="level"></span></p>
+                    <p class="castingTime">Casting Time: <span id="castingTime"></span></p>
+                    <p class="range">Range/Area : <span id="range"></span></p>
+                    <p class="components">Components: <span id="components"></span></p>
+                    <p class="duration">Duration: <span id="duration"></span></p>
+                    <p class="school">School: <span id="school"></span></p>
+                    <p class="attackSave">Attack/Save: <span id="attackSave"></span></p>
+                    <p class="dmgEffect">Damage/Effect: <span id="dmgEffect"></span></p>
+              </div>
+              <div id="spellDescription">
+               <p>Description: <span id="description"> </span></p></div>
+            </div>
+
+        </div>
+    </div>
+
+    
+
+    
+  </body>
+  <script src="main.js"></script>
+  <script src="data.json"></script>
+</html>

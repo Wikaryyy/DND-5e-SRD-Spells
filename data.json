@@ -1,0 +1,27 @@
+[
+{
+    "spellName":"Firebolt",
+    "level":"Cantrip",
+    "range":"120ft",
+    "castingTime":"1 Action",
+    "components":"V,S",
+    "school":"Evocation",
+    "duration":"Instantaneous",
+    "description":" You hurl a mote of fire at a creature or object within range. Make a ranged spell attack against the target. On a hit, the target takes 1d10 fire damage. A flammable object hit by this spell ignites if it isn't being worn or carried. This spell's damage increases by 1d10 when you reach 5th level (2d10), 11th level (3d10), and 17th level (4d10). Spell Tags: DAMAGE"
+
+
+
+
+},
+{
+    "spellName":"Acid Splash",
+    "level":"Cantrip",
+    "range":"60ft",
+    "castingTime":"1 Action",
+    "components":"V,S",
+    "school":"Conjuration",
+    "duration":"Instantaneous",
+    "description":"You hurl a bubble of acid. Choose one or two creatures you can see within range. If you choose two, they must be within 5 feet of each other. A target must succeed on a Dexterity saving throw or take 1d6 acid damage. This spell’s damage increases by 1d6 when you reach 5th level (2d6), 11th level (3d6), and 17th level (4d6)."
+}
+]
+
