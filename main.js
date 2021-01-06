@@ -29,7 +29,7 @@ function clearSpellContainer() {
 
 function getSpell(){
     clearSpellContainer()
-    var searchArea = document.getElementById("searchArea").value;
+    var searchArea = document.getElementById("searchArea").value.toLowerCase().replaceAll(" ","-");
     searchRequest = "spells/"+searchArea;
     fetch('https://www.dnd5eapi.co/api/'+searchRequest)
         .then(function(resp) {
