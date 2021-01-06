@@ -9,6 +9,8 @@ var school = document.getElementById("school");
 var attackSave = document.getElementById("attackSave");
 var dmgEffect = document.getElementById("dmgEffect");
 var description = document.getElementById("description"); 
+var errorInfo = document.getElementById("errorInfo");
+var controller = new AbortController();
 
 var searchRequest;
 
@@ -25,15 +27,27 @@ function clearSpellContainer() {
     description.innerHTML = " ";
 }
 
-
 function getSpell(){
-    
     clearSpellContainer()
     var searchArea = document.getElementById("searchArea").value;
     searchRequest = "spells/"+searchArea;
     fetch('https://www.dnd5eapi.co/api/'+searchRequest)
-        .then((resp) => resp.json())
+        .then(function(resp) {
+            console.log(resp.status);
+            console.log(!resp.ok);
+            if(resp.status == 404){
+                errorInfo.innerHTML = " ";
+                errorInfo.innerHTML = "The spell you are looking for may not be in the SRD or you wrote it wrong ";
+                controller.abort();
+            }
+            if (!resp.ok) {
+                
+                throw new Error("HTTP status " + resp.status);
+            }
+            return resp.json();
+        })
         .then((json) => {
+            errorInfo.innerHTML = " ";
             console.log(json)
             spellName.innerHTML +="<br>"+json.name;
             if(json.level == 0){
@@ -45,17 +59,12 @@ function getSpell(){
             castingTime.innerHTML += "<br>"+json.casting_time;
             range.innerHTML += "<br>"+json.range;
             components.innerHTML += "<br>"+json.components;
-            console.log(components.innerHTML);
             for(component = 0; component < 3; component++){
                 let componentArrayShort = ['V','S','M'];
                 let componentArrayFull = ['Verbal','Somatic','Material']
                 
                 if(components.innerHTML.includes(componentArrayShort[component])){
-                    components.title += componentArrayFull[component]+",";
-                    
-                }
-                else{
-
+                    components.title += componentArrayFull[component]+",";   
                 }
             }
             duration.innerHTML += "<br>"+json.duration;
@@ -83,7 +92,6 @@ function getSpell(){
             else{
                 dmgEffect.innerHTML += "<br> Check Description" ; 
             }
-
             description.innerHTML += "<br>"+json.desc;
     })
 }

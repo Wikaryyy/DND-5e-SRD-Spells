@@ -18,8 +18,9 @@
             <div id="inputContainer">
                   <p id="searchTemplate">Spell search template: ray-of-frost <br>(U need to write it in lowercase and with - instead of " ")</p>
                   <input type="text" placeholder="What spell are you looking for?" id="searchArea">
-                  <input type="submit" value="Szukaj" onclick="getSpell()">
-                  <input type="submit" value="Czysc" onclick="clearSpellContainer()">
+                  <p id="errorInfo"></p>
+                  <input type="submit" value="Search" onclick="getSpell()">
+                  <input type="submit" value="Clear" onclick="clearSpellContainer()">
             </div>
 
             <div id="spellContainer">
