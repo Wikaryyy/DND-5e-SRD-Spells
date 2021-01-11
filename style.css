@@ -50,10 +50,12 @@ body
     border-color: var(--colorOfBorder);  
     border-style:inset;
 }
+
 #spellStatistics
 {
     margin-right: 15px;
 }
+
 
 #inputContainer
 {

@@ -10,6 +10,7 @@ var attackSave = document.getElementById("attackSave");
 var dmgEffect = document.getElementById("dmgEffect");
 var description = document.getElementById("description"); 
 var errorInfo = document.getElementById("errorInfo");
+var classes = document.getElementById("classes");
 var controller = new AbortController();
 
 var searchRequest;
@@ -93,6 +94,17 @@ function getSpell(){
                 dmgEffect.innerHTML += "<br> Check Description" ; 
             }
             description.innerHTML += "<br>"+json.desc;
+            console.log(json.classes.length);
+            for(i = 0; i < json.classes.length; i++){
+                if(classes.innerHTML == ""){
+                    classes.innerHTML +="<br>"+ json.classes[i].name;
+                }
+                else
+                {
+                    classes.innerHTML +=", " +json.classes[i].name; 
+                }
+               
+            }
     })
 }
 
