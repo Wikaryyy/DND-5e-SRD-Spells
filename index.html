@@ -8,7 +8,9 @@
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.gstatic.com">
-<link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/@tarekraafat/autocomplete.js@8.2.1/dist/css/autoComplete.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tarekraafat/autocomplete.js@8.2.1/dist/css/autoComplete.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
   </head>
 
   <body>
@@ -17,7 +19,7 @@
 
             <div id="inputContainer">
                   <p id="title">SRD 5E SPELL SEARCHENGINE</p>
-                  <input type="text" placeholder="What spell are you looking for?" id="searchArea">
+                  <input type="text" placeholder="What spell are you looking for?" id="autoComplete">
                   <p id="errorInfo"></p>
                   <input type="submit" value="Search" onclick="getSpell()">
                   <input type="submit" value="Clear" onclick="clearSpellContainer()">
@@ -48,5 +50,7 @@
     
   </body>
   <script src="main.js"></script>
+  <script src="https://unpkg.com/@tarekraafat/autocomplete.js@8.2.1/dist/js/autoComplete.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@tarekraafat/autocomplete.js@8.2.1/dist/js/autoComplete.min.js"></script>
   <script src="data.json"></script>
 </html>
